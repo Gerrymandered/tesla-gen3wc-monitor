@@ -34,8 +34,8 @@ services:
     networks:
       - monitoring
     environment: 
-      - HPWC_IP
-      - INFLUX_IP=host.docker.internal
+      - HPWC_IP=10.0.0.5 #Set this IP to the Wall Connector
+      - INFLUX_IP=host.docker.internal #Set this IP to point to the Docker container
     depends_on:
       - influxdb
 networks:
